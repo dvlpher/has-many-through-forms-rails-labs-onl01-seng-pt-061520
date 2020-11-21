@@ -1,1 +1,10 @@
-
+<%= @post.title %>
+<% @post.post_categories.each do |c| %>
+<%= c.category.name %>
+<% end %>
+<%= @post.content %>
+<% @post.comments.each do |c| %>
+<% binding.pry %>
+<%= c.user.username %>
+ - <%= c.content %>
+<% end %>
